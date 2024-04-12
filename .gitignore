@@ -3,3 +3,4 @@ __MACOSX
 data
 test.py
 .DS_Store
+.mypy_cache
