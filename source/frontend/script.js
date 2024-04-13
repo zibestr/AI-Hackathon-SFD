@@ -1,14 +1,12 @@
-import axios from "https://cdn.jsdelivr.net/npm/axios@1.3.6/+esm";
-
-function handleFile(file) {
-  axios.post("/api/data", file).then(function (response) {
+async function handleFile(file) {
+  await axios.post("/api/data", file).then(function (response) {
     console.log(response.data);
   });
   window.location.replace("result.html");
 }
 
 document.getElementById("file").addEventListener("change", function (event) {
-  const file = event.dataTransfer.files[0];
+  const file = event.target.files[0];
   handleFile(file);
 });
 
@@ -31,6 +29,7 @@ dropzone.addEventListener("dragleave", function (event) {
 dropzone.addEventListener("drop", function (event) {
   event.preventDefault();
   dropzone.classList.remove("dragover");
+  console.log(event);
   const file = event.dataTransfer.files[0];
 
   if (file.type === "text/csv" || file.type === "application/json") {
