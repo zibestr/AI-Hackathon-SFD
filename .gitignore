@@ -4,3 +4,4 @@ data
 test.py
 .DS_Store
 .mypy_cache
+catboost_info
