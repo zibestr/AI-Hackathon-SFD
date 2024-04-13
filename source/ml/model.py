@@ -1,7 +1,7 @@
 from joblib import load
 import pandas as pd
 import numpy as np
-from source.ml.transforms import make_transformer
+from ml.transforms import make_transformer
 
 
 class Model:

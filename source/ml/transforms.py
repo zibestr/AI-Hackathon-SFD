@@ -59,7 +59,7 @@ def make_transformer():
         'appl_mrkr',
         'evry_qrtr_pmnt'
     ]
-    cat_cols = [
+    float_cols = [
         'balance',
         'oprtn_sum_per_qrtr',
         'oprtn_sum_per_year',
@@ -76,9 +76,9 @@ def make_transformer():
         'currency',
         'GDP',
         'inflation',
-        'unemployment'
+        'unemployment',
     ]
-    float_cols = ['quarter', 'region']
+    cat_cols = ['quarter', 'region']
     transformer = ColumnTransformer(
         transformers=(
             ('int_trans', IntegerFeaturesTransformer(), int_cols),
