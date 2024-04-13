@@ -1,13 +1,12 @@
-async function handleFile(file) {
-  //   await axios.post("/api/data", file).then(function (response) {
-  //     console.log(response.data);
-  //   });
-  window.location.replace("result.html");
-}
+// async function handleFile(file) {
+//     await axios.post("/api/data", file).then(function (response) {
+//       console.log(response.data);
+//      });
+//   window.open("result.html", "_blank");
+// }
 
 document.getElementById("file").addEventListener("change", function (event) {
-  const file = event.target.files[0];
-  handleFile(file);
+  window.open("/send", "_blank");
 });
 
 const dropzone = document.getElementById("dropzone");
@@ -32,7 +31,7 @@ dropzone.addEventListener("drop", function (event) {
   const file = event.dataTransfer.files[0];
 
   if (file.type === "text/csv" || file.type === "application/json") {
-    handleFile(file);
+    window.open("/send", "_blank");
   } else {
     alert("Перетащите CSV или JSON файл.");
   }
