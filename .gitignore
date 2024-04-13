@@ -5,3 +5,5 @@ test.py
 .DS_Store
 .mypy_cache
 catboost_info
+source/backend/ml/__pycache__
+model.bin
