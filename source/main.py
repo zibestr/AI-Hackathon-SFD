@@ -1,8 +1,23 @@
 import os
 from flask import Flask, request, render_template, redirect, send_from_directory
 from werkzeug.utils import secure_filename
+import pandas as pd
+import numpy as np
 
-app = Flask(__name__, template_folder=os.path.join(os.path.abspath("./"), "source/templates"))
+
+app = Flask(__name__, template_folder=os.path.join(os.path.abspath("./"),
+                                                   "source/templates"))
+
+def from_model(data: pd.DataFrame) -> np.ndarray[float]:
+    """Add new columns and calculate model prediction
+
+    Args:
+        data (pd.DataFrame): data with columns same train.csv
+
+    Returns:
+        float: model prediction
+    """
+    pass
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -18,7 +33,7 @@ def send():
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             return redirect("/result")
-        
+
 
 @app.route('/result', methods=['GET', 'POST'])
 def result():
