@@ -110,3 +110,24 @@ body {
   font-size: 200px;
   color: #003d85;
 }
+
+.download-csv {
+  margin-top: 40px;
+  font-family: Inter;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 25px;
+  background-color: #005bc6;
+  font-weight: 500;
+  height: 83px;
+  width: 439px;
+  border: none;
+}

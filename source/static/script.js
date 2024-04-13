@@ -1,13 +1,21 @@
-// async function handleFile(file) {
-//     await axios.post("/get_file", file).then(function (response) {
-//       console.log(response.data);
-//      });
-//   window.open("result.html", "_blank");
-// }
-
-document.getElementById("/get_file").addEventListener("change", function (event) {
+function handleFile(file) {
   window.open("/send", "_blank");
-});
+}
+
+if (document.getElementById("file")) {
+  document.getElementById("file").addEventListener("change", function (event) {
+    const file = event.target.files[0];
+    handleFile(file);
+  });
+}
+
+if (document.getElementById("download-csv")) {
+  document
+    .getElementById("download-csv")
+    .addEventListener("click", function () {
+      window.open("./download");
+    });
+}
 
 const dropzone = document.getElementById("dropzone");
 
@@ -31,7 +39,7 @@ dropzone.addEventListener("drop", function (event) {
   const file = event.dataTransfer.files[0];
 
   if (file.type === "text/csv" || file.type === "application/json") {
-    window.open("/send", "_blank");
+    handleFile(file);
   } else {
     alert("Перетащите CSV или JSON файл.");
   }
