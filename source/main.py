@@ -10,15 +10,18 @@ def home():
     return render_template("index.html")
 
 
-@app.route('/send', methods=['GET', 'POST'])
+@app.route('/get_file', methods=['GET', 'POST'])
 def send():
     if request.method == 'POST':
         file = request.files['file']
         if file:
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect("/")
+            return redirect("/result")
+        
 
+@app.route('/result', methods=['GET', 'POST'])
+def result():
     return render_template("result.html")
 
 

@@ -1,11 +1,11 @@
 // async function handleFile(file) {
-//     await axios.post("/api/data", file).then(function (response) {
+//     await axios.post("/get_file", file).then(function (response) {
 //       console.log(response.data);
 //      });
 //   window.open("result.html", "_blank");
 // }
 
-document.getElementById("file").addEventListener("change", function (event) {
+document.getElementById("/get_file").addEventListener("change", function (event) {
   window.open("/send", "_blank");
 });
 
