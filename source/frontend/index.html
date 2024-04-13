@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>ZV</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2>Команда ZhимоVики</h2>
+        <h2>
+          Исследование и прогнозирование динамики лояльности участников НПО
+        </h2>
+      </header>
+      <main class="main">
+        <label class="input-file">
+          <h2>Загрузите CSV или JSON файл</h2>
+          <input type="file" id="file" name="file" accept=".csv, .json" />
+          <span>Выбрать файл</span>
+
+          <h2>Или перетащите файл в область</h2>
+          <button class="dragover" id="dropzone" type="file">
+            <img src="Group 2.svg" alt="" />
+          </button>
+        </label>
+      </main>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
