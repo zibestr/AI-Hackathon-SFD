@@ -1,7 +1,7 @@
 async function handleFile(file) {
-  await axios.post("/api/data", file).then(function (response) {
-    console.log(response.data);
-  });
+  //   await axios.post("/api/data", file).then(function (response) {
+  //     console.log(response.data);
+  //   });
   window.location.replace("result.html");
 }
 
@@ -29,7 +29,6 @@ dropzone.addEventListener("dragleave", function (event) {
 dropzone.addEventListener("drop", function (event) {
   event.preventDefault();
   dropzone.classList.remove("dragover");
-  console.log(event);
   const file = event.dataTransfer.files[0];
 
   if (file.type === "text/csv" || file.type === "application/json") {
