@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #edfffe;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px 20px;
+}
+
+.header h2 {
+  font-family: Inter;
+  color: #004391;
+  font-weight: 500;
+  font-size: 24px;
+  max-width: 500px;
+}
+
+.input-file {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-file h2 {
+  color: #005bc6;
+  font-family: Inter;
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.input-file span {
+  margin-top: 40px;
+  font-family: Inter;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  font-size: 28px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 25px;
+  background-color: #005bc6;
+  font-weight: 500;
+  height: 83px;
+  width: 439px;
+  border: none;
+  transition: background-color 0.2s;
+}
+.input-file input[type="file"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.input-file span:hover {
+  background-color: #0062d1;
+}
+.input-file span:active {
+  background-color: #003877;
+}
+
+#dropzone {
+  width: 521px;
+  height: 250px;
+  border: 2px solid #005bc6;
+  border-radius: 26px;
+  background: #ffffff;
+  margin-top: 30px;
+}
+
+.main h1 {
+  margin-top: 120px;
+  color: #005bc6;
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#result {
+  margin-top: 20px;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 200px;
+  color: #003d85;
+}
+
+.download-csv {
+  margin-top: 40px;
+  font-family: Inter;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 25px;
+  background-color: #005bc6;
+  font-weight: 500;
+  height: 83px;
+  width: 439px;
+  border: none;
+}
