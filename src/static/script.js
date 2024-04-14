@@ -1,4 +1,11 @@
 function handleFile(file) {
+  var formData = new FormData();
+  formData.append("file", file);
+  axios.post('/', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  });
   window.open("/result", "_blank");
 }
 
